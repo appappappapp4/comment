@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+/* ---------------------------------------------------------
+
+reset
+
+----------------------------------------------------------*/
+/*要素のフォントサイズやマージン・パディングをリセットしています*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, 
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    outline:0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+
+/*新規追加要素はインライン要素→ブロック要素*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ul, ol {
+    list-style: none; 
+}
+
+/*引用符の表示が出ないようにしています*/
+blockquote, q {
+    quotes:none;
+}
+
+/*blockquote要素、q要素の前後にコンテンツを追加しないように指定しています*/
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+/*a要素のフォントサイズなどをリセットしフォントの縦方向の揃え位置を親要素のベースラインに揃えるようにしています*/
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* ins要素のデフォルトをセットし、色を変える場合はここで変更できるようにしています */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* mark要素のデフォルトをセットし、色やフォントスタイルを変える場合はここで変更できるようにしています
+また、mark要素とは、文書内の検索結果で該当するフレーズをハイライトして、目立たせる際に使用するようです。*/
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+/*テキストに打ち消し線が付くようにしています*/
+del {
+    text-decoration: line-through;
+}
+
+em {
+	font-style:italic;
+}
+
+/*IEではデフォルトで点線を下線表示する設定ではないので、下線がつくようにしています
+マウスオーバー時にヘルプカーソルの表示*/
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+/*隣接するセルのボーダーを重ねて表示、間隔0指定*/
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/*水平罫線のデフォルトである立体的な罫線を見えなくしています*/
+hr {
+    display:block;
+	clear:both;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+/*縦方向の揃え位置→中央揃え*/
+input, select {
+    vertical-align:middle;
+}
+
+
+img {
+vertical-align: top;
+font-size:0;
+line-height: 0;
+}
+
+a img {
+	border: none;
+}
+
+/************************************
+form
+*************************************/
+
+/*
+reset
+***********************/
+
+button,
+option,
+select,
+textarea,
+input[type="button"],
+input[type="submit"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="select"],
+input[type="option"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border: none;
+    outline: 0;
+    margin: 0;
+    background: #fff;
+}
+
+/* デフォルトのradio、checkboxは非表示 */
+
+input[type=radio],
+input[type=checkbox] {
+    display: none;
+}
+
+/* for firefox */
+
+select {
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+
+/* for ie10 ie11 ie系のプルダウンの矢印を消す ie9は非対応 */
+
+select::-ms-expand {
+    display: none;
+}
+
+
+
+
+/* ---------------------------------------------------------
+
+COMMON
+
+----------------------------------------------------------*/
+/* ---------------------------------------------------------
+tittle
+----------------------------------------------------------*/
+
+h1 {
+	font-size: 20px;
+	font-weight: 100;
+	font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	
+}
+
+h2 {
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1.2;
+	font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	
+}
+
+h3 {
+	font-size: 15px;
+	font-weight: bold;
+	font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	
+}
+
+
+/* ---------------------------------------------------------
+text style
+----------------------------------------------------------*/
+
+p {
+	margin-bottom: 1.0em;
+}
+
+small{
+	font-size:10px;
+	line-height: 1 !important;	
+}
+strong {
+	font-weight: bold;
+}
+
+.hidden {
+	display: none;
+}
+
+.top0 {
+	margin-top:0px !important;
+}
+
+.top15 {
+	margin-top:15px !important;
+}
+
+.btm0 {
+	margin-bottom:0px !important;
+}
+
+.text_caution {
+	color:#D26;
+}
+
+address {
+	margin-bottom: 1.0em;	
+	
+}
+
+
+/* ---------------------------------------------------------
+link
+----------------------------------------------------------*/
+
+a {
+	color: #36C;
+	text-decoration:none;
+}
+
+a:visited {
+	color: #535388;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #D26;
+	text-decoration:underline;
+}
+
+a:active {
+	color: #F69;
+}
+
+
+/* ---------------------------------------------------------
+Clearfix
+----------------------------------------------------------*/
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+pre {
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+}
+
+/* ---------------------------------------------------------
+
+font
+
+----------------------------------------------------------*/
+/*medium*/
+@font-face {
+    font-family:'FOT-RodinPro-EB';
+    src: url('./font/FOT-RodinPro-EB.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'TT_SCezanne-B';
+    src:url('./font/TT_SCezanne-B.ttf') format('truetype');
+    font-weight:700;
+    font-style: normal;
+}
+
