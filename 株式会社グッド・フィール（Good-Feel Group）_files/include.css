@@ -1,0 +1,2321 @@
+@charset "utf-8";
+
+
+/* ---------------------------------------------------------
+		  -961px: PC
+     960px-769px: tablet-wide,smartphone-wide,tablet		 
+	 768px-320px: smartphone
+----------------------------------------------------------*/
+
+/* ---------------------------------------------------------
+
+header
+
+----------------------------------------------------------*/
+header {
+
+}
+
+header .is-fixed {
+}
+
+header nav {
+	position: fixed;
+	z-index: 2500;
+	width: 100%;
+	left:0;	
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;	
+	}
+
+header .nav-box{
+	display: block;
+	position: relative;
+	width:100%;
+	margin:0 auto;	
+	height: 80px;
+	background-color: rgba(255,255,255,0.8);	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+	}
+
+header .sp_nav-box{
+	display: none;
+	}
+
+header .nav-box .nav-logo{
+	float:left;
+	padding: 25px 0;
+	padding-left: 50px;
+    width: 81px;
+	height: 30px;
+	}
+
+header .nav-box .nav-logo img{
+	height: 100%;
+	}
+
+header .nav-box .nav-menu{
+	display: block;
+	float:right;
+	width:650px;
+	}
+
+header .nav-box ul.nav-list{
+	text-align: center;
+	display: flex;
+	position: relative;
+ padding: 0px; /* ←追加 */
+ margin: 0px; /* ←追加 */	
+	}
+
+header .nav-box li.nav-txt01{
+	position: relative;
+	width:160px;
+	margin:33px 0;	
+	font-family: "FOT-セザンヌ Pro B";
+	font-size: 12px;
+  border-left: 1px solid #323232;	
+	}
+
+header .nav-box li.nav-txt01:first-child{
+  border-left: 0px;	
+	}
+
+header .nav-box li.nav-txt01 li + header .nav-box li.nav-txt01 li {
+  border-left: 1px solid #323232;
+}
+
+header .nav-box li.nav-txt01:hover {	
+	color: #ffb32e;
+	}
+
+.en,.ja {
+	display: block; 
+	width: 100%;
+	position: absolute;
+	transition: .5s;
+}
+
+.en {
+ opacity: 1;
+ color: #323232;
+}
+.ja {
+ opacity: 0;
+ color: #ffb32e;
+	top:-8px;
+}
+
+.ja .sub {
+	font-size: 12px;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+header .nav-box li.nav-txt01:hover .en { /* aにホバーしたとき英語表記は透明に */
+ opacity: 0;
+}
+header .nav-box li.nav-txt01:hover .ja { /* aにホバーしたとき日本語表記を表示 */
+ opacity: 1;
+}
+
+header .wrap { /* aにホバーしたとき日本語表記を表示 */
+	overflow: hidden;
+}
+
+.mdd-wrap {
+	position:fixed;
+	top:54px;
+	left: 0;
+	width:100%;
+	z-index: -5;
+	padding: 0 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+
+}
+.mdd-wrap .mdd-inner {
+	display:none;
+	z-index: 5;	
+	margin:  0 auto;
+	background:#ccc;
+	color: #323232;
+	background-color: rgba(255,255,255,1.0);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 0 0 40px 40px ;
+	   -moz-border-radius: 0 0 40px 40px ;
+	    -ms-border-radius: 0 0 40px 40px ;
+			border-radius: 0 0 40px 40px ;
+}
+
+header .mdd-container {
+	padding: 80px 0px 40px;
+	}
+
+header .mdd-container h2.title {
+	font-size: 28px;
+	text-align: center;
+	line-height: 1.2;	
+	font-family: "FOT-ロダン Pro B";
+	color: #323232;	
+}
+
+header .mdd-container p.title-sub {
+	padding-bottom: 1em;
+	font-size: 13px;
+	text-align: center;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+header .mdd-container .mdd-link{
+	margin: 10px 0;
+}
+
+header .mdd-container .mdd-link .mdd-btn{
+	position: relative;
+	width:200px;
+	height: 45px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	background: #ffb32e;
+	font-size: 13px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+		display: flex;
+		display: -o-flex;	
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
+		   -moz-justify-content: center;
+			-ms-justify-content: center;
+			 -o-justify-content: center;
+				justify-content: center;
+		 -webkit-align-items: center;
+			-moz-align-items: center;
+			 -ms-align-items: center;
+			  -o-align-items: center;
+				 align-items: center;	
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+header .mdd-container .mdd-link .mdd-btn span{
+	text-align: right;
+	position: absolute;
+	top: 25%;
+	right: 7%;
+}
+
+
+
+header .mdd-container .wrap{
+	width: 840px;
+	margin: 0 auto;
+}
+
+header .mdd-container .mdd-link .mdd-btn:hover{
+	color: #ffb32e;
+	background: #fff;
+	border: 2px solid #ffb32e;	
+	transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+
+
+header .mdd-slider {
+	margin:  20px 0;
+	height: 100%;
+	width: 100%;
+	}
+
+
+/* ---------------------------------------------------------
+basic
+----------------------------------------------------------*/
+header .mdd-slider .slider-list{
+	display: inline-block;	
+	position: relative;
+	width:25%;
+	max-width: 307px;
+    height: 220px;
+	margin: 15px 25px 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	    -ms-border-radius: 20px;
+			border-radius: 20px;
+	/*overflow: hidden;*/
+}
+header .mdd-slider .slider-list:hover{
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+header .mdd-slider .slider-list .slider-mask{
+	position: relative;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	    -ms-border-radius: 20px;
+			border-radius: 20px;
+	overflow: hidden;
+}
+
+header .mdd-slider .slider-list:last-child{
+	margin-right:0 !important;
+}
+
+header .mdd-slider .slider-list .slider-box{
+	position: absolute;
+	padding: 10px;
+	width: 100%;
+	height: 20%;
+	top:100%;
+	background-color: rgba(0,0,0,0.8);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 0 0 20px 20px ;
+	   -moz-border-radius: 0 0 20px 20px ;
+	    -ms-border-radius: 0 0 20px 20px ;
+			border-radius: 0 0 20px 20px ;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+	overflow: hidden;
+}
+
+header .mdd-slider .slider-list:hover .slider-box {
+	top :80%;
+	overflow: hidden;
+}
+
+
+header .mdd-slider .slider-list .slider-img{
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+	width:100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	    -ms-border-radius: 20px;
+			border-radius: 20px;
+}
+
+header .mdd-slider .slider-list .slider-img img{
+	width: 100%;
+	height: 220px;	
+	object-fit: cover;
+	margin: 0 auto;
+	display: block;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/	
+}
+
+header .mdd-slider .slider-list .slider-img img.recruit{
+    height: 161px;
+}
+
+
+header .mdd-slider .slider-list:hover .slider-img img{
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+header .mdd-slider .slider-list .slider-box .slider-txt{
+	color: #fff;
+	font-family: "FOT-ロダン Pro B";		
+}
+
+header .mdd-slider .slider-list .slider-box .slider-txt p{
+	font-size: 12px;
+	font-family: "FOT-ロダン Pro B";
+}
+
+header .mdd-slider .slider-list h3{
+	margin-top: 10px;
+	font-size: 13px;
+	font-family: "FOT-UD角ゴ_スモール Pr6 B";
+	opacity:1;	/* マスクを表示する */
+}
+
+header .mdd-slider .slider-list:hover h3{
+	color: #ffb32e;
+	opacity:1;
+}
+
+/* ---------------------------------------------------------
+news
+----------------------------------------------------------*/
+header .mdd-news {
+	margin:  20px 0;
+	height: 100%;
+	width: 100%;
+	}
+
+
+dl.news-list{
+	margin:35px;
+	padding:0;
+	line-height:1.8;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+dl.news-list dt{
+	width:6em;
+	float:left;
+	margin:0;
+	padding:0 0 0 5px;
+	font-family: "FOT-ロダン Pro B";
+}
+dl.news-list dd{
+	position:relative;
+	margin:0 0 10px;
+	padding:0 5px 10px 20em;
+	border-bottom:1px solid #b0b0b0;
+	text-align: left;
+}
+
+dl.news-list dd span.news-tag{
+	position:absolute;
+	top:0;
+	left:110px;
+	width:100px;
+	height: 20px;
+	margin:0;
+	padding:0;
+	color: #fff;
+	background: #a9a9a9;
+	font-size: 9px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+		-ms-border-radius: 40px;
+			border-radius: 40px;
+	display: flex;
+	display: -o-flex;	
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	   -moz-justify-content: center;
+	    -ms-justify-content: center;
+	     -o-justify-content: center;
+	        justify-content: center;
+	 -webkit-align-items: center;
+	    -moz-align-items: center;
+	     -ms-align-items: center;
+	      -o-align-items: center;
+         	 align-items: center;
+	font-family: "FOT-ロダン Pro B";
+}
+
+dl.news-list dd span.new-info{
+	color: #ff3f3f;
+	padding-left: 1em;
+	font-family: "FOT-セザンヌ Pro DB";
+}
+
+dl.news-list dd span.news-link{
+	display:block;
+	position:absolute;
+	top:0;
+	right: 0;
+	width:50px;
+	margin:0;
+	padding:0;
+	text-align:center;
+	border-radius:2px;
+}
+
+
+dl a:hover dd{
+	color: #ffb32e;
+	text-decoration: none;
+}
+
+dl a:hover dd span.news-tag{
+	background: #ffb32e;
+	text-decoration: none;
+}
+
+dl a:hover dd span.news-link{
+	color: #ffb32e;
+	text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------
+recruit
+----------------------------------------------------------*/
+header .mdd-container .mdd-link_sub{
+	margin: 10px 0;
+}
+
+header .mdd-container .mdd-link_sub .mdd-btn_sub{
+	float: left;
+	position: relative;
+	width:200px;
+	height: 45px;
+	margin: 0 5px;
+	text-align: center;
+	color: #323232;
+	background: #fff;
+	border: 2px solid #ccc;
+	font-size: 13px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+		display: flex;
+		display: -o-flex;	
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
+		   -moz-justify-content: center;
+			-ms-justify-content: center;
+			 -o-justify-content: center;
+				justify-content: center;
+		 -webkit-align-items: center;
+			-moz-align-items: center;
+			 -ms-align-items: center;
+			  -o-align-items: center;
+				 align-items: center;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+header .mdd-container .mdd-link_sub .mdd-btn_sub:hover{
+	color: #fff;
+	background: #ffb32e;
+	border: none;	
+	transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+header .mdd-container .mdd-link_sub .mdd-btn_sub span{
+	text-align: right;
+	position: absolute;
+	top: 25%;
+	right: 7%;
+}
+
+header .mdd-slider .slider-list_recruit{
+	display: inline-block;	
+	position: relative;
+	width:25%;
+	max-width: 225px;
+    height: 161px;
+	margin: 15px 15px 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	    -ms-border-radius: 20px;
+			border-radius: 20px;	
+}
+
+header .mdd-slider .slider-list_recruit:hover{
+		overflow: visible;
+		transform: scale(1.1);	/*画像の拡大率*/
+		transition-duration: 0.3s;	/*変化に掛かる時間*/
+	}
+
+header .mdd-slider .slider-list_recruit:last-child{
+	margin-right:0 !important;
+}
+
+header .mdd-slider .slider-list_recruit .slider-box{
+	position: absolute;
+	padding: 10px;
+	width: 100%;
+	height: 20%;
+	top:100%;
+	opacity:		0;	/* マスクを表示しない */
+	background-color: rgba(0,0,0,0.8);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 0 0 20px 20px ;
+	   -moz-border-radius: 0 0 20px 20px ;
+	    -ms-border-radius: 0 0 20px 20px ;
+			border-radius: 0 0 20px 20px ;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+	overflow: hidden;
+}
+
+header .mdd-slider .slider-list_recruit:hover .slider-box {
+	opacity:		1;	/* マスクを表示する */
+	top :80%;
+	overflow: hidden;
+}
+
+
+header .mdd-slider .slider-list_recruit .slider-img{
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+	width:100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	    -ms-border-radius: 20px;
+			border-radius: 20px;
+}
+
+header .mdd-slider .slider-list_recruit .slider-img img{
+	width: 100%;
+	height: 161px;	
+	object-fit: cover;
+	margin: 0 auto;
+	display: block;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/	
+}
+
+header .mdd-slider .slider-list_recruit:hover .slider-img img{
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+header .mdd-slider .slider-list_recruit .slider-box .slider-txt{
+	color: #fff;
+	font-family: "FOT-ロダン Pro EB";		
+}
+
+header .mdd-slider .slider-list_recruit .slider-box .slider-txt p{
+	font-size: 12px;
+	font-family: "FOT-ロダン Pro B";
+	line-height: 0.5;
+}
+
+header .mdd-slider .slider-list_recruit h3{
+	margin-top: 10px;
+	font-size: 13px;
+	font-family: "FOT-UD角ゴ_スモール Pr6 B";	
+}
+
+header .mdd-slider .slider-list_recruit:hover h3{
+	color: #ffb32e;
+}
+
+
+
+
+@media screen and (min-width: 961px) and (max-width: 1200px) { 
+
+	header .mdd-slider .slider-list{
+		display: inline-block;	
+		position: relative;
+		width:25%;
+		max-width: 307px;
+		height: 150px;
+		margin: 15px 15px 0px;
+	}
+
+	header .mdd-slider .slider-list .slider-img img{
+		height: 150px;
+	}	
+
+	header .mdd-slider .slider-list_recruit{
+		display: inline-block;	
+		position: relative;
+		width:20%;
+		max-width: 225px;
+		height: 120px;
+		margin: 15px 10px 0px;
+	}
+
+	header .mdd-slider .slider-list_recruit .slider-img img{
+		height: 120px;
+	}		
+	
+}
+
+/* ---------------------------------------------------------
+english
+----------------------------------------------------------*/
+header .nav-box li.nav-txt02{
+	float: left;
+	margin:26px 0;
+	padding: 5px 0;
+	width:80px;
+	height: 27px;
+	color: #fff;
+	background: #ffb32e;
+	font-size: 10px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;	
+	}
+
+header .nav-box li.nav-txt02:hover{
+	color: #ffb32e;
+	background: #fff;
+	border: 1px solid #ffb32e;	
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+
+/* ---------------------------------------------------------
+tablet + smartphone
+----------------------------------------------------------*/
+@media screen and (max-width: 960px) { 
+
+header  {
+	width: 100%;
+	position: fixed;
+	z-index: 2500;
+	}
+
+header nav {
+	padding:0px;
+	}
+
+/*ハンバーガーメニューが開いたときにスクロールをオン*/
+header nav#global.is-active {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+	-webkit-overflow-scrolling: touch; /*滑らかスクロール*/
+}
+
+/*ハンバーガーメニューが開いたときは背景を固定*/
+body.is-fixed{
+	position: fixed;
+	width:100%;
+}
+	
+header .nav-box{
+	display: none;
+	}	
+
+header .sp_nav-box{
+	display: block;
+	margin:0 auto;
+	}
+	
+header .sp_nav-box .nav-head{
+	background:#fff;
+	position: relative;
+	z-index: 100;
+	}	
+
+ header .sp_nav-box .inner{
+
+ }
+ header .sp_nav-box .header-inner{
+	height: 60px; 
+	display: flex;
+	display: -o-flex;	
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	-webkit-justify-content: space-between;
+	   -moz-justify-content: space-between;
+	    -ms-justify-content: space-between;
+	     -o-justify-content: space-between;
+	        justify-content: space-between;
+	 -webkit-align-items: center;
+	    -moz-align-items: center;
+	     -ms-align-items: center;
+	      -o-align-items: center;
+         	 align-items: center;
+	}
+
+header .sp_nav-box .nav-head .nav-logo{
+	margin-left:15px;
+    width: 120px;
+	height: 20px;
+	}
+
+header .sp_nav-box .nav-head .nav-logo img{
+	width: 100%;
+	}	
+	
+header .sp_nav-box .nav-head .click-nav{
+	position: relative;
+	margin:0 15px;	
+	width: 29px;
+	height: 33px;
+	cursor: pointer;
+ }
+header .sp_nav-box .nav-head .click-nav span{
+	display: block;
+	position: absolute;
+	right: 0;
+	-webkit-transition: .3s;
+	transition: .3s;
+ }
+header .sp_nav-box .nav-head .click-nav .one{
+	top: 0;
+	background: #333;
+	width: 100%;
+	height: 3px;	
+ }
+header .sp_nav-box .nav-head .click-nav .two{
+	top:8px;
+	background: #333;
+	width: 100%;
+	height: 3px;	
+ }
+header .sp_nav-box .nav-head .click-nav .three{
+	top:16px;
+	background: #333;
+	width: 100%;
+	height: 3px;	
+ }
+
+header .sp_nav-box .nav-head .click-nav .txt{
+	top:23px;
+	font-family: "FOT-セザンヌ Pro B";
+	font-size: 10px;
+
+ }
+	
+header .sp_nav-box .nav-head .click-nav.is-active .one{
+	transform:rotate(45deg);
+	top: 9px;
+ }
+header .sp_nav-box .nav-head .click-nav.is-active .two{
+	right: -100px;
+ }
+header .sp_nav-box .nav-head .click-nav.is-active .three{
+	top: 9px;
+	transform:rotate(-45deg);
+ }
+
+header .sp_nav-box .menu-wrap{
+	background: #fff;
+	width: 100%;
+	position:relative;
+	/*top:-20px;*/
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10 !important;
+	-webkit-transition: .5s;
+	transition: .5s;
+	display: none;
+ }
+	
+header .sp_nav-box .menu-wrap.is-active{
+	opacity: 1;
+	visibility: visible;
+	display: block;
+ }
+
+ /* body-wrap */
+ #body-wrap{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 5;
+ }
+
+header .sp_nav-box .menu-wrap .menu{
+	/*padding: 20px 0 0 0;*/
+	}
+
+
+header .sp_nav-box .menu-wrap .menu h2.nav_list,
+header .sp_nav-box .menu-wrap .menu h2.nav_list_link{
+	text-indent: 20px;
+	font-size: 15px;
+	border-top: solid 1px #ddd;
+	text-align: left;
+	font-family: "FOT-ロダン Pro EB";
+	height: 70px;
+	display: flex;
+	display: -o-flex;	
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	-webkit-justify-content: flex-start;
+	   -moz-justify-content: flex-start;
+	    -ms-justify-content: flex-start;
+	     -o-justify-content: flex-start;
+	        justify-content: flex-start;
+	 -webkit-align-items: center;
+	    -moz-align-items: center;
+	     -ms-align-items: center;
+	      -o-align-items: center;
+         	 align-items: center;
+}
+	
+header .sp_nav-box .menu-wrap .menu  h2.nav_list:hover,
+header .sp_nav-box .menu-wrap .menu h2.nav_list_link:hover{
+	background: #ffb32e;
+	color: #fff;
+	}	
+
+header .sp_nav-box .menu-wrap .menu h2.nav_list .sub,
+header .sp_nav-box .menu-wrap .menu h2.nav_list_link .sub{
+	font-size: 12px;
+	 display: flex;
+	 display: -webkit-flex;	
+	font-family: "FOT-ロダン Pro DB";	
+	}
+
+header .sp_nav-box .menu-wrap .menu h2 .fa-chevron-circle-right{
+	position: absolute;
+    right: 22px;
+}
+h2 .list-arrow{
+	display:block;
+	text-align: right;
+}
+
+h2 .list-arrow:after{
+	padding: 0 15px 0 0;
+	position: absolute;
+	right: 5px;
+	content: "＋";
+	font-family: "FOT-ロダン Pro DB";
+	font-size: 15px;
+	color:#aaa;
+	margin-top: -7px;
+}
+	
+h2.bg02 .list-arrow{
+	display:block;
+	text-align: right;
+}
+
+h2.bg02 .list-arrow:after{
+	padding: 0 15px 0 0;
+	position: absolute;
+	right: 5px;
+	content: "－";
+	font-family: "FOT-ロダン Pro DB";
+	font-size: 15px;
+	color:#aaa;
+	margin-top: -7px;
+}
+	
+header .sp_nav-box .menu-wrap .menu .nav_content{
+display: none;
+ }	
+	
+header .list-container {
+	padding: 20px 0px;
+	border-top: solid 1px #ddd; 
+	background: #f0f0f0;
+	}
+
+header .list-container h2.title {
+	font-size: 28px;
+	text-align: center;
+	line-height: 1.2;	
+	font-family: "FOT-ロダン Pro B";
+	color: #323232;	
+}
+
+header .list-container p.title-sub {
+	padding-bottom: 1em;
+	font-size: 13px;
+	text-align: center;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+header .list-container .list-link{
+	margin: 10px 0;
+}
+
+header .list-container .list-link .list-btn{
+	position: relative;
+	width:250px;
+	height: 45px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	background: #ffb32e;
+	font-size: 13px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+		display: flex;
+		display: -o-flex;	
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
+		   -moz-justify-content: center;
+			-ms-justify-content: center;
+			 -o-justify-content: center;
+				justify-content: center;
+		 -webkit-align-items: center;
+			-moz-align-items: center;
+			 -ms-align-items: center;
+			  -o-align-items: center;
+				 align-items: center;	
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+header .list-container .list-link .list-btn span{
+	text-align: right !important;
+	position: absolute;
+	top: 25%;
+	right: 5%;
+}
+
+header .list-container .list-link .list-btn:hover{
+	color: #ffb32e;
+	background: #fff;
+	border: 2px solid #ffb32e;	
+	transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+header .list-slider {
+	margin:  20px auto;
+	padding: 0 6px;
+	height: 100%;
+	width: 100%;
+	max-width:940px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;	
+	}
+
+/* ---------------------------------------------------------
+basic
+----------------------------------------------------------*/
+header .list-slider .slider-list{
+	display: inline-block;	
+	position: relative;
+	width:49%;
+	max-width: 450px;
+    height: auto;
+	padding: 15px 5px 0px 10px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+			border-radius: 5px;
+	/*overflow: hidden;*/
+}
+	header .list-slider a:nth-child(even) .slider-list{
+		padding: 15px 10px 0px 5px;
+	}
+header .list-slider .slider-list a{
+	width: 100%;
+	}
+header .list-slider .slider-list:hover{
+	transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+header .list-slider .slider-list .slider-mask{
+	position: relative;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+			border-radius: 5px;
+	overflow: hidden;
+}
+
+header .list-slider .slider-list:last-child{
+	margin-right:0 !important;
+}
+
+header .list-slider .slider-list .slider-box{
+	position: absolute;
+	padding: 5px;
+	width: 100%;
+	height: 30%;
+	min-height: 100px;
+	top:100%;
+	background-color: rgba(0,0,0,0.8);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 0 0 5px 5px ;
+	   -moz-border-radius: 0 0 5px 5px ;
+	    -ms-border-radius: 0 0 5px 5px ;
+			border-radius: 0 0 5px 5px ;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+	overflow: hidden;
+}
+
+header .list-slider .slider-list:hover .slider-box {
+	top :75%;
+	overflow: hidden;
+}
+
+
+header .list-slider .slider-list .slider-img{
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+	width:100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+			border-radius: 5px;
+}
+
+header .list-slider .slider-list .slider-img img{
+	width: 100%;
+	height: auto;	
+	object-fit: cover;
+	margin: 0 auto;
+	display: block;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/	
+}
+
+header .list-slider .slider-list .slider-img img.recruit{
+    height: 161px;
+}
+
+
+header .list-slider .slider-list:hover .slider-img img{
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+header .list-slider .slider-list .slider-box .slider-txt{
+	color: #fff;
+	font-family: "FOT-ロダン Pro B";		
+}
+
+header .list-slider .slider-list .slider-box .slider-txt p{
+	font-size: 12px;
+	font-family: "FOT-ロダン Pro B";
+	text-align: center;
+}
+
+header .list-slider .slider-list h3{
+	margin-top: 0px;
+	font-size: 12px;
+	font-family: "FOT-UD角ゴ_スモール Pr6 B";
+	opacity:1;	/* マスクを表示する */
+	text-align: center;
+}
+
+header .list-slider .slider-list:hover h3{
+	color: #ffb32e;
+	opacity:1;
+}
+
+	
+@media screen and (max-width: 350px) {
+	header .list-slider .slider-list h3{
+		font-size: 10px;
+	}
+
+}
+/* ---------------------------------------------------------
+news
+----------------------------------------------------------*/
+header .list-news {
+	margin:  20px 0;
+	height: 100%;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	}
+
+
+dl.news-list{
+	margin:35px 5%; 
+	margin-bottom: 0;
+	padding:0;
+	line-height:1.8;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+dl.news-list dt{
+	width:6em;
+	float:left;
+	margin:0;
+	padding:0;
+	font-family: "FOT-ロダン Pro B";
+	font-size: 13px;
+}
+header dl.news-list dd{
+	position:relative;
+	margin:0 0 10px;
+	padding:0 5px 60px 0;
+	border-bottom:1px solid #b0b0b0;
+	text-align: left;
+}
+
+dl.news-list dd span.news-tag{
+	position:absolute;
+	top:2px;
+	left:80px;
+	width:90px;
+	height: 20px;
+	margin:0;
+	padding:0;
+	margin-left:15px; 
+	color: #fff;
+	background: #a9a9a9;
+	font-size: 9px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+		-ms-border-radius: 40px;
+			border-radius: 40px;
+	display: flex;
+	display: -o-flex;	
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	   -moz-justify-content: center;
+		-ms-justify-content: center;
+		 -o-justify-content: center;
+			justify-content: center;
+	 -webkit-align-items: center;
+		-moz-align-items: center;
+		 -ms-align-items: center;
+		  -o-align-items: center;
+			 align-items: center;
+	font-family: "FOT-ロダン Pro B";
+}
+
+dl.news-list dd span.news-tag02{
+	position:absolute;
+	top:2px;
+	left:90px;
+	width:90px;
+	height: 20px;
+	margin:0;
+	padding:0;
+	color: #fff;
+	background: #4e4e4e;
+	font-size: 9px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+		-ms-border-radius: 40px;
+			border-radius: 40px;
+	display: flex;
+	display: -o-flex;	
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	   -moz-justify-content: center;
+		-ms-justify-content: center;
+		 -o-justify-content: center;
+			justify-content: center;
+	 -webkit-align-items: center;
+		-moz-align-items: center;
+		 -ms-align-items: center;
+		  -o-align-items: center;
+			 align-items: center;
+	font-family: "FOT-ロダン Pro B";
+	}
+	
+dl.news-list dd span.new-info{
+	float: left;
+	color: #ff3f3f;
+	position: relative;
+	left:105px;
+	font-size: 12px;
+}
+
+	
+dl.news-list dd span.news-title{
+		position:absolute;
+		overflow: hidden;
+		width: 90%;
+		top:20px;
+		left:0px;
+		margin:10px 0;
+		padding:0;
+		color: #5c5c5c;
+		font-size: 12px;		
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+		display: flex;
+		display: -o-flex;	
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		-webkit-justify-content: left;
+		   -moz-justify-content: left;
+			-ms-justify-content: left;
+			 -o-justify-content: left;
+				justify-content: left;
+		 -webkit-align-items: left;
+			-moz-align-items: left;
+			 -ms-align-items: left;
+			  -o-align-items: left;
+				 align-items: left;
+	font-family: "FOT-ロダン Pro B";
+	}
+	
+dl.news-list dd span.ico-new{
+		padding-left: 10px;
+		color:#ff3f3f;
+		font-weight: bold;
+	font-family: "FOT-ロダン Pro B";
+	}	
+
+dl.news-list dd span.news-link{
+		display:block;
+		position:absolute;
+		top:10px;
+		right: 0;
+		width:50px;
+		margin:0;
+		padding:0;
+		text-align:center;
+		border-radius:2px;
+}
+
+dl a:hover dt{
+	color: #ffb32e;
+	text-decoration: none;
+}
+
+dl a:hover dd{
+	color: #ffb32e;
+	text-decoration: none;
+}
+
+dl a:hover dd span.news-tag{
+	background: #ffb32e;
+	text-decoration: none;
+}
+
+dl a:hover dd span.news-link{
+	color: #ffb32e;
+	text-decoration: none;
+}
+
+dl a:hover dd span.news-title{
+	color: #ffb32e;
+	text-decoration: none;
+	}	
+	
+	
+header dl.news-list dd span.news-title p{
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin-bottom: 0;
+	}
+	
+
+/* ---------------------------------------------------------
+recruit
+----------------------------------------------------------*/
+
+header .list-container .wrap{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+	
+header .list-container .list-link_sub{
+	margin: 10px;
+}
+
+header .list-container .list-link_sub .list-btn_sub{
+	float: left;
+	position: relative;
+	width:47%;
+	height: 45px;
+	margin: 0 1%;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #323232;
+	background: #fff;
+	border: 2px solid #ccc;
+	font-size: 13px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+		display: flex;
+		display: -o-flex;	
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
+		   -moz-justify-content: center;
+			-ms-justify-content: center;
+			 -o-justify-content: center;
+				justify-content: center;
+		 -webkit-align-items: center;
+			-moz-align-items: center;
+			 -ms-align-items: center;
+			  -o-align-items: center;
+				 align-items: center;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+header .list-container .list-link_sub .list-btn_sub:hover{
+	color: #fff;
+	background: #ffb32e;
+	border: none;	
+	transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+header .list-container .list-link_sub .list-btn_sub span{
+	text-align: right;
+	position: absolute;
+	top: 25%;
+	right: 7%;
+}
+
+header .list-slider .slider-list_recruit{
+	display: inline-block;	
+	position: relative;
+	width:25%;
+	max-width: 225px;
+    height: 161px;
+	margin: 15px 15px 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	    -ms-border-radius: 20px;
+			border-radius: 20px;	
+}
+
+header .list-slider .slider-list_recruit:hover{
+		overflow: visible;
+		transform: scale(1.1);	/*画像の拡大率*/
+		transition-duration: 0.3s;	/*変化に掛かる時間*/
+	}
+
+header .list-slider .slider-list_recruit:last-child{
+	margin-right:0 !important;
+}
+
+header .list-slider .slider-list_recruit .slider-box{
+	position: absolute;
+	padding: 10px;
+	width: 100%;
+	height: 20%;
+	top:100%;
+	opacity:		0;	/* マスクを表示しない */
+	background-color: rgba(0,0,0,0.8);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 0 0 20px 20px ;
+	   -moz-border-radius: 0 0 20px 20px ;
+	    -ms-border-radius: 0 0 20px 20px ;
+			border-radius: 0 0 20px 20px ;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+	overflow: hidden;
+}
+
+header .list-slider .slider-list_recruit:hover .slider-box {
+	opacity:		1;	/* マスクを表示する */
+	top :80%;
+	overflow: hidden;
+}
+
+
+header .list-slider .slider-list_recruit .slider-img{
+	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+	width:100%;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 20px;
+	   -moz-border-radius: 20px;
+	    -ms-border-radius: 20px;
+			border-radius: 20px;
+}
+
+header .list-slider .slider-list_recruit .slider-img img{
+	width: 100%;
+	height: 161px;	
+	object-fit: cover;
+	margin: 0 auto;
+	display: block;	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/	
+}
+
+header .list-slider .slider-list_recruit:hover .slider-img img{
+	transform: scale(1.1);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+header .list-slider .slider-list_recruit .slider-box .slider-txt{
+	color: #fff;
+	font-family: "FOT-ロダン Pro EB";		
+}
+
+header .list-slider .slider-list_recruit .slider-box .slider-txt p{
+	font-size: 12px;
+	font-family: "FOT-ロダン Pro B";
+	line-height: 0.5;
+}
+
+header .list-slider .slider-list_recruit h3{
+	margin-top: 10px;
+	font-size: 13px;
+	font-family: "FOT-UD角ゴ_スモール Pr6 B";	
+}
+
+header .list-slider .slider-list_recruit:hover h3{
+	color: #ffb32e;
+}
+
+
+/* ---------------------------------------------------------
+sns
+----------------------------------------------------------*/	
+header .nav-sns{
+	display: block;
+	width: 100%;
+	margin: 0px auto;
+	padding: 10px 0;
+	border-top: solid 1px #ddd;	
+	}
+
+header .nav-sns .sns-link{
+	display: block;
+	width: 100%;
+	max-width: 135px;
+	margin: 10px auto;
+	}
+
+header .nav-sns .sns-link .tw-btn{
+		float: left;
+		width:54px;
+		height: 54px;
+		text-align: center;
+		color: #fff;
+		background: #1da1f2;
+		font-family: "FOT-ロダン Pro EB";	
+		font-size: 24px;	
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+		-webkit-border-radius: 100px;
+		   -moz-border-radius: 100px;
+			-ms-border-radius: 100px;
+				border-radius: 100px;
+			display: flex;
+			display: -o-flex;	
+			display: -ms-flex;
+			display: -moz-flex;
+			display: -webkit-flex;
+			-webkit-justify-content: center;
+			   -moz-justify-content: center;
+				-ms-justify-content: center;
+				 -o-justify-content: center;
+					justify-content: center;
+			 -webkit-align-items: center;
+				-moz-align-items: center;
+				 -ms-align-items: center;
+				  -o-align-items: center;
+					 align-items: center;
+		margin-bottom: 10px;
+		margin-right: 25px;
+	}
+
+header .nav-sns .sns-link .tw-btn:hover{
+		color: #1da1f2;
+		background: #fff;
+		border: 3px solid #1da1f2;	
+		transform: scale(1.05);	/*画像の拡大率*/	
+		transition-duration: 0.3s;	/*変化に掛かる時間*/	
+	}
+
+header .nav-sns .sns-link .fb-btn{
+		float: left;
+		width:54px;
+		height: 54px;
+		text-align: center;
+		color: #fff;
+		background: #4267b2;
+		font-family: "FOT-ロダン Pro EB";	
+		font-size: 24px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+		-webkit-border-radius: 100px;
+		   -moz-border-radius: 100px;
+			-ms-border-radius: 100px;
+				border-radius: 100px;
+			display: flex;
+			display: -o-flex;	
+			display: -ms-flex;
+			display: -moz-flex;
+			display: -webkit-flex;
+			-webkit-justify-content: center;
+			   -moz-justify-content: center;
+				-ms-justify-content: center;
+				 -o-justify-content: center;
+					justify-content: center;
+			 -webkit-align-items: center;
+				-moz-align-items: center;
+				 -ms-align-items: center;
+				  -o-align-items: center;
+					 align-items: center;
+	}
+
+header .nav-sns .sns-link .fb-btn:hover{
+		color: #4267b2;
+		background: #fff;
+		border: 3px solid #4267b2;		
+		transform: scale(1.05);	/*画像の拡大率*/	
+		transition-duration: 0.3s;	/*変化に掛かる時間*/	
+	}
+
+header .nav-terms_sp{
+	display: block;
+
+	}	
+	
+header .nav-terms_sp .terms{
+		padding: 0;
+	}
+
+header .nav-terms_sp{
+		border-top: none;
+	}
+
+header .nav-terms_sp .termss{
+		width: 100%;
+		max-width: 100%;
+		padding: 0 10px;
+	}
+
+header .nav-terms_sp .terms ul.list-terms{
+		text-align: center;
+	}
+
+header .nav-terms_sp .terms ul.list-terms li{
+			float: left;
+			display: inline-block;
+			background: #fff;
+			width: 49.8%;
+			height: 60px;
+			font-family: "FOT-UD角ゴ_スモール Pr6 M";
+			font-size: 14px;
+			border: 1px solid #c4c4c4;
+			border-bottom: none;
+			border-left: none;
+			display: flex;
+			display: -o-flex;	
+			display: -ms-flex;
+			display: -moz-flex;
+			display: -webkit-flex;	
+			-webkit-justify-content: center;
+			   -moz-justify-content: center;
+				-ms-justify-content: center;
+				 -o-justify-content: center;
+					justify-content: center;
+			 -webkit-align-items: center;
+				-moz-align-items: center;
+				 -ms-align-items: center;
+				  -o-align-items: center;
+					 align-items: center;	
+	}
+header .nav-terms_sp .terms ul.list-terms a:nth-child(even) li{
+	border-right: none;
+}
+header .nav-terms_sp .terms ul.list-terms li:nth-child(2){
+	border-right: none;
+}
+header .nav-terms_sp .terms ul.list-terms li:nth-child(4){
+	border-right: none;
+}
+	
+	
+header .nav-terms_sp .terms ul.list-terms li:hover{
+	background: #f3f3f3;
+	color: #ffb32e;
+	cursor: pointer;
+	}	
+
+header .nav-terms_sp .terms ul.list-terms li:hover a{
+	color: #ffb32e;
+	}	
+	
+		
+header .nav-terms_sp .terms ul.list-terms .wrap::before{
+    content: "\A" ;
+    white-space: pre ;
+	}
+
+header .nav-terms_sp .terms ul.list-terms li.logo{
+		float: none;
+		display: block;	
+		font-family: "FOT-セザンヌ Pro DB";
+		font-size: 12px;
+		width: 100%;
+		height: 50px;
+		padding:0;	
+	}
+
+header .nav-terms_sp .terms ul.list-terms li:first-child{
+		padding-left:0;
+	}	
+
+}
+
+
+/* ---------------------------------------------------------
+
+footer
+
+----------------------------------------------------------*/
+
+footer {
+	background: #eee;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+}
+
+footer .footer-wrap {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 70px 15px 0;
+}
+
+footer .footer-wrap nav {
+	float: left;
+}
+
+footer .footer-wrap nav .nav-wrap {
+	min-width:900px;
+	width: 100%;
+}
+
+footer .footer-wrap nav .nav-block {
+	display: inline-block;
+	vertical-align: top; 
+	max-width: 200px;
+	min-width: 50px;
+	width: 21.5%;	
+	margin-right: 3%;
+}
+
+	footer .footer-wrap nav .nav-block:last-child {
+		margin-right: 0 !important;
+	}
+
+footer .footer-wrap nav .nav-block h3 {
+	font-size: 20px;
+	font-family: "FOT-ロダン Pro EB";	
+	border-bottom: solid 1px #acacac;
+	padding-bottom: 20px;
+}
+
+footer .footer-wrap nav .nav-block h3 i {
+	color: #a2a2a2 !important;
+	font-size: 18px;
+}
+
+
+
+footer .footer-wrap nav .nav-block ul.nav-list {
+	padding-top: 20px;
+	font-family: "FOT-UD角ゴ_スモール Pr6 DB";
+}
+
+footer .footer-wrap nav .nav-block ul.nav-list li {
+	padding: 5px 0;
+
+	font-size: 12px;
+	line-height: 2;
+}
+
+footer .footer-wrap nav .nav-block ul.nav-list li i {
+	color: #a2a2a2 !important;
+	font-size: 11px;
+	
+}
+
+footer .footer-wrap nav .nav-block a{
+	text-decoration-line: none;
+	color: #323232;
+}
+
+footer .footer-wrap nav .nav-block a:hover{
+	color:#888;
+}
+
+footer .footer-wrap aside.pc_aside {
+	float: right;
+}
+
+footer .footer-wrap aside.pc_aside .aside-wrap{
+
+}
+
+footer .footer-wrap aside.pc_aside .aside-link{
+	width:300px;
+}
+
+footer .footer-wrap aside.pc_aside .aside-link .tw-btn{
+	width:300px;
+	height: 65px;
+	text-align: center;
+	color: #fff;
+	background: #1da1f2;
+	font-family: "FOT-ロダン Pro B";	
+	font-size: 22px;	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+		display: flex;
+		display: -o-flex;	
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
+		   -moz-justify-content: center;
+			-ms-justify-content: center;
+			 -o-justify-content: center;
+				justify-content: center;
+		 -webkit-align-items: center;
+			-moz-align-items: center;
+			 -ms-align-items: center;
+			  -o-align-items: center;
+				 align-items: center;
+	margin-bottom: 10px;	
+}
+
+footer .footer-wrap aside.pc_aside .aside-link .tw-btn:hover{
+	color: #1da1f2;
+	background: #fff;
+	border: 3px solid #1da1f2;	
+	transform: scale(1.05);	/*画像の拡大率*/	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/	
+}
+
+footer .footer-wrap aside.pc_aside .aside-link .fb-btn{
+	width:300px;
+	height: 65px;
+	text-align: center;
+	color: #fff;
+	background: #4267b2;
+	font-family: "FOT-ロダン Pro B";	
+	font-size: 22px;	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+		display: flex;
+		display: -o-flex;	
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
+		   -moz-justify-content: center;
+			-ms-justify-content: center;
+			 -o-justify-content: center;
+				justify-content: center;
+		 -webkit-align-items: center;
+			-moz-align-items: center;
+			 -ms-align-items: center;
+			  -o-align-items: center;
+				 align-items: center;
+}
+
+footer .footer-wrap aside.pc_aside .aside-link .fb-btn:hover{
+	color: #4267b2;
+	background: #fff;
+	border: 3px solid #4267b2;		
+	transform: scale(1.05);	/*画像の拡大率*/	
+	transition-duration: 0.3s;	/*変化に掛かる時間*/	
+}
+
+footer .footer-wrap aside.sp_aside{
+		display: none;
+	}
+
+footer .footer-wrap .back-wrap{
+	margin: 100px 0 30px;
+	cursor: pointer;
+}
+
+footer .footer-wrap .back-btn{
+	width:1136px;
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	background: #ffb32e;
+	font-size: 45px;		
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	-webkit-border-radius: 40px;
+	   -moz-border-radius: 40px;
+	    -ms-border-radius: 40px;
+			border-radius: 40px;
+	display: flex;
+	display: -o-flex;	
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	   -moz-justify-content: center;
+		-ms-justify-content: center;
+		 -o-justify-content: center;
+			justify-content: center;
+	 -webkit-align-items: center;
+		-moz-align-items: center;
+		 -ms-align-items: center;
+		  -o-align-items: center;
+			 align-items: center;
+	margin: 0 auto;
+}
+
+footer .footer-wrap .back-btn:hover{
+	color: #ffb32e;
+	background: #fff;
+	border: 3px solid #ffb32e;	
+	transform: scale(1.05);	/*画像の拡大率*/
+	transition-duration: 0.3s;	/*変化に掛かる時間*/
+}
+
+
+
+footer .nav-terms{
+	border-top: solid 1px #acacac;
+
+}
+
+footer .nav-terms nav.terms{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+			box-sizing: border-box;	
+}
+
+footer .nav-terms nav.terms ul.list-terms{
+	font-family: "FOT-UD角ゴ_スモール Pr6 R";	
+}
+
+footer .nav-terms nav.terms ul.list-terms li{
+	float: left;
+	font-size: 11px;
+	padding-right: 45px;
+	height: 70px;
+	display: flex;
+	display: -o-flex;	
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	   -moz-justify-content: center;
+		-ms-justify-content: center;
+		 -o-justify-content: center;
+			justify-content: center;
+	 -webkit-align-items: center;
+		-moz-align-items: center;
+		 -ms-align-items: center;
+		  -o-align-items: center;
+			 align-items: center;	
+}
+
+footer .nav-terms nav.terms ul.list-terms li a{
+	text-decoration-line: none;
+	color: #323232;
+}
+
+footer .nav-terms nav.terms ul.list-terms li a:hover{
+	color:#888;
+}	
+
+footer .nav-terms nav.terms ul.list-terms li.logo{
+	float: right;
+	font-family: "FOT-セザンヌ Pro DB";
+	font-size: 13px;
+}
+
+footer .nav-terms nav.terms ul.list-terms li:nth-child(4){
+	padding-right:0;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 1240px) { 
+	
+	footer .footer-wrap aside.pc_aside{
+		display: none;
+	}	
+
+	footer .footer-wrap aside.sp_aside{
+		display: block;	
+	}
+
+	footer .footer-wrap aside.sp_aside .aside-wrap{
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	
+	footer .footer-wrap aside.sp_aside .aside-link .tw-btn{
+		float: left;
+		width:54px;
+		height: 54px;
+		text-align: center;
+		color: #fff;
+		background: #1da1f2;
+		font-family: "FOT-ロダン Pro EB";	
+		font-size: 25px;	
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+		-webkit-border-radius: 100px;
+		   -moz-border-radius: 100px;
+			-ms-border-radius: 100px;
+				border-radius: 100px;
+			display: flex;
+			display: -o-flex;	
+			display: -ms-flex;
+			display: -moz-flex;
+			display: -webkit-flex;
+			-webkit-justify-content: center;
+			   -moz-justify-content: center;
+				-ms-justify-content: center;
+				 -o-justify-content: center;
+					justify-content: center;
+			 -webkit-align-items: center;
+				-moz-align-items: center;
+				 -ms-align-items: center;
+				  -o-align-items: center;
+					 align-items: center;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+
+	footer .footer-wrap aside.sp_aside .aside-link .tw-btn:hover{
+		color: #1da1f2;
+		background: #fff;
+		border: 3px solid #1da1f2;	
+		transform: scale(1.05);	/*画像の拡大率*/	
+		transition-duration: 0.3s;	/*変化に掛かる時間*/	
+	}
+
+	footer .footer-wrap aside.sp_aside .aside-link .fb-btn{
+		float: left;
+		width:54px;
+		height: 54px;
+		text-align: center;
+		color: #fff;
+		background: #4267b2;
+		font-family: "FOT-ロダン Pro EB";	
+		font-size: 25px;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;
+		-webkit-border-radius: 100px;
+		   -moz-border-radius: 100px;
+			-ms-border-radius: 100px;
+				border-radius: 100px;
+			display: flex;
+			display: -o-flex;	
+			display: -ms-flex;
+			display: -moz-flex;
+			display: -webkit-flex;
+			-webkit-justify-content: center;
+			   -moz-justify-content: center;
+				-ms-justify-content: center;
+				 -o-justify-content: center;
+					justify-content: center;
+			 -webkit-align-items: center;
+				-moz-align-items: center;
+				 -ms-align-items: center;
+				  -o-align-items: center;
+					 align-items: center;
+	}
+
+	footer .footer-wrap aside.sp_aside .aside-link .fb-btn:hover{
+		color: #4267b2;
+		background: #fff;
+		border: 3px solid #4267b2;		
+		transform: scale(1.05);	/*画像の拡大率*/	
+		transition-duration: 0.3s;	/*変化に掛かる時間*/	
+	}
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1240px) { 
+
+	footer .footer-wrap {
+		height: 100%;
+		padding: 70px 15px 0;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+				box-sizing: border-box;	
+	}
+
+	footer .footer-wrap nav {
+		float: none;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	footer .footer-wrap nav .nav-wrap {
+		min-width:100%;
+		width: 100%;
+	}
+
+	footer .footer-wrap nav .nav-block {
+		display: inline-block;
+		vertical-align: top; 
+		max-width: 100%;
+		min-width: 50px;
+		width: 22.9%;	
+		margin-right: 2%;
+	}
+
+	footer .footer-wrap nav .nav-block:last-child {
+		margin-right: 0 !important;
+	}
+
+	footer .footer-wrap .back-wrap{
+		margin: 30px 0;
+	}
+
+	footer .footer-wrap .back-btn{
+		width:100%;
+		padding: 0 10px;
+	}
+	
+	footer .footer-wrap .back-btn:hover{
+		transform: scale(1.01);	/*画像の拡大率*/
+}
+	
+	footer .footer-wrap aside.sp_aside .aside-lang {
+		display: none; 
+	}
+	
+	footer .footer-wrap aside.sp_aside .aside-link{
+		width: 130px;
+		margin: 0px auto;
+	}
+
+	footer .nav-terms nav.terms{
+		padding: 0 15px;
+	}	
+	
+}
+
+@media screen and (max-width: 768px) { 
+	footer .footer-wrap {
+		height: 100%;
+		padding: 70px 0 0 0;
+	}
+
+	footer .footer-wrap nav {
+		display: none;
+	}
+
+	footer .footer-wrap .back-wrap{
+		display: none;
+	}
+
+	footer .footer-wrap .back-wrap{
+
+	}	
+	
+	footer .footer-wrap aside.sp_aside .aside-lang {
+		text-align: center  !important;
+		font-family: "FOT-ロダン Pro DB";	
+		font-size: 16px;
+
+	}
+
+	footer .footer-wrap aside.sp_aside .aside-lang strong {
+		font-family: "FOT-ロダン Pro UB";
+		font-size: 16px;
+	}	
+	
+	footer .footer-wrap aside.sp_aside .aside-link{	
+		width: 128px;
+		margin: 50px auto;
+	}
+	
+	footer .footer-wrap aside.sp_aside .aside-link .tw-btn,
+	footer .footer-wrap aside.sp_aside .aside-link .fb-btn{
+		width: 54px;
+		height: 54px;
+		font-size: 24px;
+	}
+	footer .footer-wrap aside.sp_aside .aside-link .tw-btn{
+		margin-right: 20px
+	}
+
+	footer .nav-terms nav.terms{
+		padding: 0 10px;
+	}
+
+	footer .nav-terms{
+		border-top: none;
+	}
+
+	footer .nav-terms nav.terms{
+		width: 100%;
+		max-width: 100%;
+		padding: 0 10px;
+	}
+
+	footer .nav-terms nav.terms ul.list-terms{
+		text-align: center;
+	}
+
+	footer .nav-terms nav.terms ul.list-terms li{
+		float: none;
+		display: inline-block;
+		font-family: "FOT-UD角ゴ_スモール Pr6 M";
+		font-size: 14px;
+		height:100%;
+		padding:0 5%;
+		padding-bottom: 70px;
+		padding-right: 0;
+	}
+		
+	footer .nav-terms nav.terms ul.list-terms .wrap::before{
+    content: "\A" ;
+    white-space: pre ;
+	}
+
+	footer .nav-terms nav.terms ul.list-terms li.logo{
+		float: none;
+		display: block;	
+		font-family: "FOT-セザンヌ Pro DB";
+		font-size: 12px;
+		width: 100%;
+		height: 50px;
+		padding:0;	
+	}
+
+	footer .nav-terms nav.terms ul.list-terms li:first-child{
+		padding-left:0;
+	}	
+
+}
+
+/* ---------------------------------------------------------
+
+footer_nolink
+
+----------------------------------------------------------*/
+#footer_nolink {
+	background: #eee;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+		    box-sizing: border-box;
+	text-align: center;
+	font-size: 12px;
+	padding: 10px;
+	font-family: "FOT-セザンヌ Pro M";
+}
